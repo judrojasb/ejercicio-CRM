@@ -1,0 +1,10 @@
+
+<h1><img src="<%= asset_path 'NatArt.JPG' %>" alt="NatArt Studio"></h1>
+<h2 class="subtitle">A safe place for children</h2>
+<p class="explanation">This is a place where children can learn while they are safe</p>
+<p class="more">Backend + frontend</p>
+<h1>Bienvenido, <%= session[:user].present? ? "#{User.find(session[:user]).name}": "Maker" %> esta es mi aplicación web.</h1>
+<body id="<%=params[:controller].parameterize %>_controller">
+<%= link_to "Ver listado", users_path %>
+<%= yield %>
+</body>

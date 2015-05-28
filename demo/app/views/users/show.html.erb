@@ -1,0 +1,5 @@
+<h1>Perfil de usuario</h1>
+<%= @user.name %>
+<%= @user.email %>
+
+<%= flash[:notice].present? ? "#{flash[:notice]}" : "El usuario no se pudo guardar" %>
