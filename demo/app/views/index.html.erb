@@ -1,10 +1,23 @@
+<div class="container">
+	<div class="fold">
+		<header>
+			<div class="menu">
+				<ul>
+					<li><a href="/users/users">Ingresa</a></li>
+					<li><a href="/users/new">Registrate</a></li>
+				</ul>
+			</div>
+		</header>
+		<section>
+			<article>
+				<h1>Un lugar para aprender en familia</h1>
+				<p>Bienvenidos a la red de homeschoolers más grande del mundo</p>		
+			</article>
+			<article class="button_container">
+				<a href="/users/new" class="button">Registrarse</a>
+			</article>
+		</section>
 
-<h1><img src="<%= asset_path 'NatArt.JPG' %>" alt="NatArt Studio"></h1>
-<h2 class="subtitle">A safe place for children</h2>
-<p class="explanation">This is a place where children can learn while they are safe</p>
-<p class="more">Backend + frontend</p>
-<h1>Bienvenido, <%= session[:user].present? ? "#{User.find(session[:user]).name}": "Maker" %> esta es mi aplicación web.</h1>
-<body id="<%=params[:controller].parameterize %>_controller">
-<%= link_to "Ver listado", users_path %>
-<%= yield %>
-</body>
+		<div class="bg_effect"></div>
+	</div>
+}</div>

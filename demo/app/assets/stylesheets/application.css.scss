@@ -3,7 +3,7 @@
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any styles
@@ -11,30 +11,84 @@
  * file per style scope.
  *
  *= require normalize
- *= require gestor
+ *
  */
+ 
 @import "breve";
-//variables
-$azul:blue;
-$fuente:normal 20px "tahoma", "Arial";
+@font-face {
+  font-family:'Sans-pro';
+  src: url('/fonts/SourceSansPro-It.eot?#iefix') format('embedded-opentype'),  url('/fonts/SourceSansPro-It.otf')  format('opentype'),
+	     url('/fonts/SourceSansPro-It.woff') format('woff'), url('/fonts/SourceSansPro-It.ttf')  format('truetype'), url('/fonts/SourceSansPro-It.svg#/fonts/SourceSansPro-It') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-.field_with_errors {
-	input {
-		border: 1px solid red;
+html, body {
+	height:100%;
+	min-height:100%;
+}
+.bg_effect {
+	background-color:rgba(#272334, .9);
+	position:absolute;
+	height:100%;
+	top:0;
+	left:0;
+	width:100%;
+}
+.container {
+	display:block;
+	height:100%;
+	min-height:100%;
+	text-align:center;
+	width:100%;
+	max-width:1024px;
+	.fold {
+		background:url("bg.jpg") center top no-repeat;
+		background-size:100%;
+		min-height:100%;
+		z-index:1;
+	}
+	header {
+		width:100%;
+		z-index:9;
+		div.menu {
+			display:inline-block;
+			margin:0 auto;
+			ul {
+				paddin:0;
+				margin:0 auto;
+				li {
+					display:inline-block;
+					padding:0;
+					a {
+						color:white;
+						text-decoration:none;
+					}
+				}
+			}
+		}
+		div.connect {
+			display:inline-block;
+			margin:0 auto;
+			position:absolute;
+			top:0;
+			right:10;
+			ul {
+				paddin:0;
+				margin:0 auto;
+				li {
+					display:inline-block;
+					padding:0;
+					a {
+						color:white;
+						font:normal 20px "Sans-pro", Tahoma;
+						text-decoration:none;
+					}
+				}
+			}
+		}
 	}
 }
-.subtitle { 
-	color: blue;
-	font:$fuente;
-}
-.explanation { 
-	color: red;
-	font:$fuente;
-}
-.more { 
-	color: red;
-	font:$fuente;
-}
-body {
-	background:url('symphony.png');
+footer {
+
 }
